@@ -1106,7 +1106,7 @@ def print(mess='',category='all'):
         kind = category 
 
     else:
-        raise ValueError(category + ' is not a valid category or creature. Pick "all", "basic", "fancy", "favorites", or "custom", or pick a specific creature.')
+        raise ValueError(str(category) + ' is not a valid category or creature. Pick "all", "basic", "fancy", "favorites", or "custom", or pick a specific creature.')
 
     stdout(message + eval(kind))
 
