@@ -1,11 +1,8 @@
 import random
-from creatures_helper import display
 
+
+# Overwrite print statement
 stdout = print
-
-def print(mess='',category='faves'):
-    display(mess,category)
-
 
 allsee = []
 
@@ -701,7 +698,6 @@ whale = r'''      \        __   __
 allsee.append('whale')
 
 
-
 fortunes = '''A beautiful, smart, and loving person will be coming into your life
 A dubious friend may be an enemy in camouflage 
 A feather in the hand is better than a bird in the air
@@ -1027,58 +1023,53 @@ Your work interests can capture the highest status or prestige'''
 
 fortunes = fortunes.split('\n')
 
+
 def hello():
     '''
     Use when friends is being run as the main program (not imported).
-    
+
     After using funtion, step by step instructions will be shown.
     '''
 
-    kind = ''
-    mess = ''
-    message = ''
-    
-    #getting user input
-    while kind == '':
+    # Getting user input
+    while True:
         kind = input('Pick a friend, or enter \'?\' to view all options: ')
 
-        if kind != 'quit':
-
-           if kind != '': 
-
-                if not kind in allsee:
-
-                    if kind != '?':
-                        stdout('\'' + kind + '\'' + ' is not a valid creature\n')
-                        kind = ''
-
-                if kind == '?':
-                    stdout(str(allsee + ['random', 'quit']) + '\n')
-                    kind = ''
-
-        if kind == 'random':
-            inlist = random.randint(0,len(allsee) - 1)
-            kind = allsee[inlist]
-                
         if kind == 'quit':
             return
 
-    
+        elif kind in ['random', '']:
+            inlist = random.randint(0, len(allsee) - 1)
+            kind = allsee[inlist]
+            break
+
+        elif kind not in allsee:
+          if kind != '?':
+              stdout('\'' + kind + '\'' +
+                      ' is not a valid creature\n')
+
+          if kind == '?':
+              stdout(str(allsee + ['random', 'quit']) + '\n')
+
+        else:
+          break
+
+
     mess = input('Message (leave blank for fortune): ')
     if mess == '':
         inlist = int(random.random() * (len(fortunes) - 2))
         mess = fortunes[inlist].strip()
-                     
-    #picking friend
-    print(mess, kind)
-    
-    #exit/restart
-    hello()
-        
 
-def print(mess='',category='all'):
-    
-    #building message
+    # picking friend
+    print(mess, kind)
+
+    # exit/restart
+    hello()
+
+
+def print(mess='', category='all'):
+
+    # building message
     finmid = '< ' + mess + ' >' + '\n'
     mtop = ' ' + '__' + '_' * len(mess) + '\n'
     mbot = ' ' + '--' + '-' * len(mess) + '\n'
@@ -1088,30 +1079,32 @@ def print(mess='',category='all'):
     choices = allsee
 
     if category == 'all':
-        kind = choices[random.randint(0,len(choices) - 1)]
+        kind = choices[random.randint(0, len(choices) - 1)]
 
     elif category == 'basic':
-        choices = ['calf','cow','dog','elephant','moose','penguin','sheep','whale']
-        kind = choices[random.randint(0,len(choices) - 1)]
+        choices = ['calf', 'cow', 'dog', 'elephant',
+                   'moose', 'penguin', 'sheep', 'whale']
+        kind = choices[random.randint(0, len(choices) - 1)]
 
     elif category == 'fancy':
-        choices = ['alligator','dragon','flamingo','horse','lion','tiger','turkey','pig']
-        kind = choices[random.randint(0,len(choices) - 1)]
+        choices = ['alligator', 'dragon', 'flamingo',
+                   'horse', 'lion', 'tiger', 'turkey', 'pig']
+        kind = choices[random.randint(0, len(choices) - 1)]
 
     elif category == 'faves':
-        choices = ['devil','dinosaur','dragon','horse','rhino','snail','snake','turtle','alien']
-        kind = choices[random.randint(0,len(choices) - 1)]
+        choices = ['devil', 'dinosaur', 'dragon', 'horse',
+                   'rhino', 'snail', 'snake', 'turtle', 'alien']
+        kind = choices[random.randint(0, len(choices) - 1)]
 
     elif category in choices:
-        kind = category 
+        kind = category
 
     else:
-        raise ValueError(str(category) + ' is not a valid category or creature. Pick "all", "basic", "fancy", "favorites", or "custom", or pick a specific creature.')
+        raise ValueError(str(
+            category) + ' is not a valid category or creature. Pick "all", "basic", "fancy", "favorites", or "custom", or pick a specific creature.')
 
     stdout(message + eval(kind))
 
 
 if __name__ == "__main__":
     hello()
-
-    
