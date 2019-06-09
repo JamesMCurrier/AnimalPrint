@@ -1,7 +1,7 @@
 import random
 
 
-# Overwrite print statement
+# Alias python print statement
 stdout = print
 
 allsee = []
@@ -1033,7 +1033,7 @@ def hello():
 
     # Getting user input
     while True:
-        kind = input('Pick a friend, or enter \'?\' to view all options: ')
+        kind = input("Pick a creature, or enter '?' to view all options: ")
 
         if kind == 'quit':
             return
@@ -1067,7 +1067,11 @@ def hello():
     hello()
 
 
-def print(mess='', category='all'):
+def print(*args, category='all'):
+
+    mess = ''
+    for i in args:
+        mess += str(i)
 
     # building message
     finmid = '< ' + mess + ' >' + '\n'
