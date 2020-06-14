@@ -14,7 +14,7 @@ Then add the following line to the top of the script you want to use it with...
 from AnimalPrint import print
 ```
 
-You can also test it out by running AnimalPrint.py directly.
+That's it! Now every print statement in your program will be much more interesting.
 
 ## Running Tests
 ### Running directly
