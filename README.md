@@ -4,7 +4,7 @@ Replacement for Python's boring built in print function
 ### Essentially cowsay on steroids
 
 ## How to Use
-`git clone https://github.com/JamesMCurrier/FieldMeasurer.git` or [click here to download](https://github.com/JamesMCurrier/FieldMeasurer/archive/master.zip)
+`git clone https://github.com/JamesMCurrier/AnimalPrint.git` or [click here to download](https://github.com/JamesMCurrier/AnimalPrint/archive/master.zip)
 
 To use with another python script, place AnimalPrint.py in the same directory as it.
 
