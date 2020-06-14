@@ -1028,7 +1028,7 @@ def hello():
     '''
     Use when friends is being run as the main program (not imported).
 
-    After using funtion, step by step instructions will be shown.
+    After using function, step by step instructions will be shown.
     '''
 
     # Getting user input
@@ -1061,7 +1061,7 @@ def hello():
         mess = fortunes[inlist].strip()
 
     # picking friend
-    print(mess, kind)
+    print(mess, category=kind)
 
     # exit/restart
     hello()
