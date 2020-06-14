@@ -1,7 +1,26 @@
 # AnimalPrint
 Replacement for Python's boring built in print function
 
-### Essentially cowsay on steroids
+```
+ __________________________________
+< Essentially cowsay on steroids!!! >
+ ----------------------------------
+    \                             .       .
+     \                           / `.   .' " 
+      \                  .---.  <    > <    >  .---.
+       \                 |    \  \ - ~ ~ - /  /    |
+             _____          ..-~             ~-..-~
+            |     |   \~~~\.'                    `./~~~/
+           ---------   \__/                        \__/
+          .'  O    \     /               /       \  " 
+         (_____,    `._.'               |         }  \/~~~/
+          `----.          /       }     |        /    \__/
+                `-.      |       /      |       /      `. ,~~|
+                    ~-.__|      /_ - ~ ^|      /- _      `..-'   
+                         |     /        |     /     ~-.     `-. _  _  _
+                         |_____|        |_____|         ~ - . _ _ _ _ _>
+
+```
 
 ## How to Use
 `git clone https://github.com/JamesMCurrier/AnimalPrint.git` or [click here to download](https://github.com/JamesMCurrier/AnimalPrint/archive/master.zip)
